@@ -49,4 +49,9 @@ export class CarsService {
     // this.cars.splice(index, 1);
     // return { deleted: true };
   }
+
+  fillCarsWithSeedData(cars: Car[]) {
+    this.cars = cars;
+    console.log(this.cars);
+  }
 }

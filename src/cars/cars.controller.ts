@@ -22,9 +22,6 @@ export class CarsController {
 
   @Get('/:id')
   getCarById(@Param('id', new ParseUUIDPipe({ version: '4' })) id: string) {
-    // if (isNaN(+id)) {
-    //   return 'ID should be a number';
-    // }
     console.log({ id });
     return this.carsService.findOneById(id);
   }
